@@ -2,38 +2,41 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Scrollable & Centered SVG</title>
+    <title>Scrolling SVG</title>
     <style>
       html, body {
         margin: 0;
         padding: 0;
-        width: 100%;
-        height: 100%;
       }
 
-      .container {
-        display: flex;
-        /* Center horizontally, but start at the top so you can scroll to see everything */
-        align-items: flex-start;   
-        justify-content: center;
-
-        /* Let the container grow + show scrollbars if needed */
-        width: 100%;
-        height: 100%;
+      /* Make a tall container so there's space above & below. */
+      .outer {
+        position: relative;
+        height: 1000vh; /* e.g. 3x the viewport height */
         overflow: auto;
       }
 
-      /* No max-width or max-height on embed, so user can zoom as far as the browser allows */
-      embed {
-        display: block; 
-        /* Optionally, add a little top margin if you want some breathing room:
-           margin-top: 1rem; */
+      /* Absolutely position the SVG in the middle of that tall area. */
+      .svg-wrapper {
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%); /* center horizontally & vertically */
       }
     </style>
   </head>
-  <body>
-    <div class="container">
-      <embed src="index.svg" type="image/svg+xml" />
+  <body onload="centerScroll()">
+    <div class="outer">
+      <div class="svg-wrapper">
+        <embed src="index.svg" type="image/svg+xml" />
+      </div>
     </div>
+
+    <script>
+      function centerScroll() {
+        // Scroll to the middle of the page on load
+        const scrollY = (document.body.scrollHeight / 2) - (window.innerHeight / 2);
+        window.scrollTo(0, scrollY);
+      }
+    </script>
   </body>
 </html>
