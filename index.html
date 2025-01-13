@@ -12,8 +12,8 @@
       /* Make a tall container so there's space above & below. */
       .outer {
         position: relative;
-        height: 1000vh; /* e.g. 3x the viewport height , also 3x width*/
-        width: 300vw;
+        height: 600vh; /* e.g. 3x the viewport height , also 3x width*/
+        width: 400vw;
         overflow: auto;
       }
 
@@ -36,7 +36,8 @@
       function centerScroll() {
         // Scroll to the middle of the page on load
         const scrollY = (document.body.scrollHeight / 2) - (window.innerHeight / 2);
-        window.scrollTo(0, scrollY);
+        const scrollX = (document.body.scrollWidth / 2) - (window.innerWidth / 2);
+        window.scrollTo(scrollX, scrollY);
       }
     </script>
   </body>
