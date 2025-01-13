@@ -1,2 +1,38 @@
 <!DOCTYPE html>
-<meta http-equiv="refresh" content="0; url=index.svg">
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Zoomable SVG</title>
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .container {
+        /* Centering via Flexbox */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        
+        /* Let a very large SVG overflow and create scrollbars if needed */
+        overflow: auto;
+      }
+      /* Embed with no maximum constraints */
+      embed {
+        display: block;
+        /* No width/height means the SVG can render at its natural size, 
+           and user can do full browser zoom */
+        /* width: auto; height: auto; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <embed src="index.svg" type="image/svg+xml" />
+    </div>
+  </body>
+</html>
