@@ -1,0 +1,44 @@
+[
+  {
+    "stopID": "5z4",
+    "name": "Dodda Bommasandra",
+    "lat": 13.06065,
+    "lng": 77.55889,
+    "svgFile": "schematics/bmtc-2_stops_5z4-6ox_min15_schematic.svg"
+  },
+  {
+    "stopID": "1md",
+    "name": "Bellanduru Gate SJP Road",
+    "lat": 12.91858,
+    "lng": 77.66991,
+    "svgFile": "schematics/bmtc-2_stops_1md-37k_min15_schematic.svg"
+  },
+  {
+    "stopID": "2fi",
+    "name": "Ryan International School",
+    "lat": 12.81955,
+    "lng": 77.58483,
+    "svgFile": "schematics/bmtc-2_stops_2fi-2vg_min15_schematic.svg"
+  },
+  {
+    "stopID": "62l",
+    "name": "Nagavara",
+    "lat": 13.03825,
+    "lng": 77.62352,
+    "svgFile": "schematics/bmtc-2_stops_62l-6bi_min15_schematic.svg"
+  },
+  {
+    "stopID": "16r",
+    "name": "Hejjala Cross",
+    "lat": 12.85539,
+    "lng": 77.4264,
+    "svgFile": "schematics/bmtc-2_stops_16r-tb_min15_schematic.svg"
+  },
+  {
+    "stopID": "2lw",
+    "name": "Sadashivanagara Police Station",
+    "lat": 13.01587,
+    "lng": 77.57277,
+    "svgFile": "schematics/bmtc-2_stops_2lw-55q_min15_schematic.svg"
+  }
+]
